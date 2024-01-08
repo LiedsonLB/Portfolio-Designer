@@ -297,6 +297,7 @@ header nav li:hover {
     left: 0;
     height: 100%;
     background-color: var(--color-site);
+    border-radius: 20px;
 }
 
 .percent-100 .scale-indicator {
