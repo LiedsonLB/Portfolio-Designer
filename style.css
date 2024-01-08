@@ -331,7 +331,82 @@ header nav li:hover {
 
 }
 #container-projects {
-
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.container-projectBtn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: var(--font-doppio);
+    color: var(--color-white);
+}
+.projectBtn {
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid var(--color-site);
+    color: var(--color-site);
+    font-family: var(--font-doppio);
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.projectBtn:hover {
+    background-color: #07a075;
+    color: var(--color-white) !important;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid var(--color-site);
+    padding: 1rem;
+    border-radius: 20px;
+    position: relative;
+    min-width: 45%;
+    width: 300px;
+    height: auto;
+}
+.container-project-img {
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+}
+.container-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+.project-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.project-text h4 {
+    font-family: var(--font-doppio);
+    color: var(--color-white);
+}
+.project-text p {
+    position: relative;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: justify !important;
+    max-width: 100%; /* Define a largura máxima desejada */
+    max-height: 60px;
+    overflow: hidden; /* Impede que o texto ultrapasse a largura máxima */
+    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar que o texto foi cortado */
 }
 
 /* Certificados e Cursos */
@@ -542,5 +617,11 @@ footer h4 {
     }
     #container-bio-text {
         font-size: 0.9rem;
+    }
+    footer h4 {
+        font-size: 0.7rem;
+    }
+    .project {
+        width: 100% !important;
     }
 }
