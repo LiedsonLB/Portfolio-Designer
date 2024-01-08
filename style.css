@@ -592,7 +592,7 @@ footer h4 {
     }
     #apresention-container-img img{
         transform: translateY(2rem);
-        width: 15rem;
+        width: 12rem;
     }
     .sphere1 {
         width: 70vmin;
@@ -625,7 +625,7 @@ footer h4 {
     .project {
         width: 100% !important;
     }
-    .carga_horaria {
-        right: 1rem !important;
+    .container-projectBtn, .carga_horaria {
+        right: 0.5rem !important;
     }
 }
