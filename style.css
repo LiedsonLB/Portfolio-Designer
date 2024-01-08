@@ -270,7 +270,7 @@ header nav li:hover {
     box-sizing: border-box;
     display: flex;
     gap: 2rem;
-    min-width: 400px;
+    min-width: 300px;
 }
 .tech-skill img img, .soft-skills img img {
     object-fit: cover;
@@ -627,5 +627,10 @@ footer h4 {
     }
     .container-projectBtn, .carga_horaria {
         right: 0.5rem !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container-projectBtn, .carga_horaria {
+        right: 5px !important;
     }
 }
