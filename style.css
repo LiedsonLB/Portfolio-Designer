@@ -565,6 +565,7 @@ footer h4 {
         width: 100%;
         gap: 1rem;
         padding: 1rem 0px;
+        margin-bottom: 1.5rem;
     }
     #apresention-container-text {
         height: auto;
@@ -585,7 +586,6 @@ footer h4 {
         justify-content: center;
         height: auto;
         margin: 0 auto;
-        padding-top: 2rem;
         position: relative;
         z-index: 1;
     }
@@ -623,5 +623,8 @@ footer h4 {
     }
     .project {
         width: 100% !important;
+    }
+    .carga_horaria {
+        right: 1rem !important;
     }
 }
