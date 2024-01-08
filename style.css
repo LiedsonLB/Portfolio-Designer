@@ -12,7 +12,7 @@ body, html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
 }
 * {
@@ -77,6 +77,7 @@ header nav li:hover {
     display: flex;
     width: 85%;
     margin: 0 auto;
+    position: relative;
 }
 #apresention-container-text {
     height: auto;
@@ -162,8 +163,8 @@ header nav li:hover {
     background-color: var(--color-site);
     border-radius: 50%;
     position: absolute;
-    top: -20%;
-    right: -20%;
+    top: -40%;
+    right: -25%;
     opacity: 0.5;
     filter: drop-shadow(2px 4px 20px var(--color-site));
 }
@@ -173,8 +174,8 @@ header nav li:hover {
     background-color: var(--color-site);
     border-radius: 50%;
     position: absolute;
-    top: -30%;
-    left: -10%;
+    top: -40%;
+    left: -30%;
     opacity: 0.4;
     filter: drop-shadow(2px 4px 20px var(--color-site));
 }
@@ -269,10 +270,7 @@ header nav li:hover {
     box-sizing: border-box;
     display: flex;
     gap: 2rem;
-}
-.tech-skill img, .soft-skills img {
-    height: 100%;
-    width: 20%;
+    min-width: 400px;
 }
 .tech-skill img img, .soft-skills img img {
     object-fit: cover;
@@ -297,11 +295,34 @@ header nav li:hover {
 .scale-indicator {
     position: absolute;
     left: 0;
-    width: 100px;
     height: 100%;
     background-color: var(--color-site);
 }
 
+.percent-100 .scale-indicator {
+    width: 100%;
+}
+.percent-90 .scale-indicator {
+    width: 90%;
+}
+.percent-80 .scale-indicator {
+    width: 80%;
+}
+.percent-60 .scale-indicator {
+    width: 60%;
+}
+.percent-40 .scale-indicator {
+    width: 40%;
+}
+.percent-20 .scale-indicator {
+    width: 20%;
+}
+.percent-10 .scale-indicator {
+    width: 10%;
+}
+.percent-0 .scale-indicator {
+    width: 0%;
+}
 /* Projetos */
 #projets {
 
@@ -330,6 +351,7 @@ header nav li:hover {
     border-radius: 20px;
     position: relative;
     min-width: 45%;
+    width: 100%;
 }
 .certificado img {
     border-radius: 10px;
@@ -376,6 +398,7 @@ header nav li:hover {
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: .3s ease-in;
 }
 .moreBtn:hover {
     background-color: #07a075;
@@ -398,6 +421,7 @@ footer h4 {
 @media screen and (max-width: 1140px) {
     #apresention {
         height: auto;
+        overflow-x: hidden;
     }
     #bio {
         padding: 5rem 1.5rem !important;
@@ -410,12 +434,19 @@ footer h4 {
     }
 }
 @media screen and (max-width: 720px) {
+    h1 {
+        padding: 5rem 1rem !important;
+    }
+    .sphere1, .sphere2 {
+        position: absolute;
+    }
     #apresention {
         height: auto;
         display: flex;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         flex-direction: column-reverse;
+        overflow: hidden;
     }
     header {
         padding: 1rem 1rem;
@@ -446,6 +477,7 @@ footer h4 {
         line-height: 2rem;
         font-size: clamp(0.7rem, 2vw, 1rem) !important;
         text-align: center;
+        padding: 0 1rem;
     }
     #invite {
         width: 100%;
@@ -456,7 +488,7 @@ footer h4 {
         align-items: center;
         justify-content: center;
         width: 100%;
-        gap: 5px;
+        gap: 1rem;
         padding: 1rem 0px;
     }
     #apresention-container-text {
@@ -469,21 +501,22 @@ footer h4 {
         align-items: start;
         justify-content: space-around;
         color: var(--color-white);
+        z-index: 3;
     }
     #apresention-container-img {
         width: 100%;
         display: flex;
         align-items: end;
         justify-content: center;
-        height: 200px;
+        height: auto;
         margin: 0 auto;
         padding-top: 2rem;
         position: relative;
         z-index: 1;
     }
     #apresention-container-img img{
-        transform: translateY(0);
-        width: 10rem;
+        transform: translateY(2rem);
+        width: 15rem;
     }
     .sphere1 {
         width: 70vmin;
@@ -506,5 +539,8 @@ footer h4 {
         left: -30%;
         opacity: 0.4;
         filter: drop-shadow(2px 4px 20px var(--color-site));
+    }
+    #container-bio-text {
+        font-size: 0.9rem;
     }
 }
