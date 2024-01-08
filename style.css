@@ -372,7 +372,7 @@ header nav li:hover {
     border-radius: 20px;
     position: relative;
     min-width: 45%;
-    width: 300px;
+    width: 400px;
     height: auto;
 }
 .container-project-img {
@@ -629,6 +629,12 @@ footer h4 {
         right: 0.5rem !important;
     }
 }
+@media screen and (max-width: 400px) {
+    .project {
+        min-width: 300px !important;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .container-projectBtn, .carga_horaria {
         right: 5px !important;
